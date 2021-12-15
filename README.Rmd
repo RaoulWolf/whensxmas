@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# {whensxmas}
+# When's Christmas? {whensxmas}
 
 <!-- badges: start -->
 [![Codecov test coverage](https://codecov.io/gh/RaoulWolf/whensxmas/branch/master/graph/badge.svg)](https://app.codecov.io/gh/RaoulWolf/whensxmas?branch=master)

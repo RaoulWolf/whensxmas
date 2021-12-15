@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# {whensxmas}
+# When’s Christmas? {whensxmas}
 
 <!-- badges: start -->
 

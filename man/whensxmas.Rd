@@ -2,7 +2,7 @@
 % Please edit documentation in R/whensxmas.R
 \name{whensxmas}
 \alias{whensxmas}
-\title{whensxmas}
+\title{Days Until Christmas}
 \usage{
 whensxmas(...)
 }
@@ -13,7 +13,7 @@ whensxmas(...)
 Returns a message with the number of days left until Christmas.
 }
 \description{
-A simple function to tell you how many days are left until the next Christmas
+A simple function to tell you how many days are left until the next Christmas.
 }
 \details{
 The description says it all - plain and simple!

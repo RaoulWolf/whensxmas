@@ -7,7 +7,7 @@
 #' @examples {
 #' whensxmas()
 #' }
-#' @importFrom lubridate year ymd days
+#' @importFrom lubridate days year ymd
 #' @export
 whensxmas <- function(...) {
 
