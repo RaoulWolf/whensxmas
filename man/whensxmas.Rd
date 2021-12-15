@@ -4,9 +4,11 @@
 \alias{whensxmas}
 \title{Days Until Christmas}
 \usage{
-whensxmas(...)
+whensxmas(date = NULL, ...)
 }
 \arguments{
+\item{date}{The target date as "YYYY-MM-DD" character string. Defaults to the current machine date.}
+
 \item{...}{Additional arguments. Currently not implemented.}
 }
 \value{

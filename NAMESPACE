@@ -2,5 +2,6 @@
 
 export(whensxmas)
 importFrom(lubridate,days)
+importFrom(lubridate,today)
 importFrom(lubridate,year)
 importFrom(lubridate,ymd)

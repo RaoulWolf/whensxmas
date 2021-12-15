@@ -1,5 +1,6 @@
 #' @title Days Until Christmas
 #' @description A simple function to tell you how many days are left until the next Christmas.
+#' @param date The target date as "YYYY-MM-DD" character string. Defaults to the current machine date.
 #' @param ... Additional arguments. Currently not implemented.
 #' @details The description says it all - plain and simple!
 #' @return Returns a message with the number of days left until Christmas.
@@ -7,33 +8,41 @@
 #' @examples {
 #' whensxmas()
 #' }
-#' @importFrom lubridate days year ymd
+#' @importFrom lubridate days today year ymd
 #' @export
-whensxmas <- function(...) {
+whensxmas <- function(date = NULL, ...) {
 
-  today <- Sys.Date()
+  if (is.null(date)) {
 
-  current_year <- lubridate::year(today)
+    date <- lubridate::today()
+
+  } else {
+
+    date <- lubridate::ymd(date)
+
+  }
+
+  current_year <- lubridate::year(date)
 
   current_xmas <- lubridate::ymd(paste0(current_year, "-12-25"))
 
-  if (today < current_xmas) {
+  if (date < current_xmas) {
 
     next_xmas <- current_xmas
 
-  } else if (today > current_xmas) {
+  } else if (date > current_xmas) {
 
     next_xmas <- lubridate::ymd(paste0(current_year + 1, "-12-25"))
 
-  } else if (today == current_xmas) {
+  } else if (date == current_xmas) {
 
     next_xmas <- current_xmas
 
   }
 
-  xmas_diff <- lubridate::days(next_xmas - today)
+  xmas_diff <- lubridate::days(next_xmas - date)
 
-  if (today == current_xmas) {
+  if (date == current_xmas) {
 
     xmas_text <- "Christmas is today!"
 
