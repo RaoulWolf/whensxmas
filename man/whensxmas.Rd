@@ -4,26 +4,25 @@
 \alias{whensxmas}
 \title{Days Until Christmas}
 \usage{
-whensxmas(date = NULL, ...)
+whensxmas(date = NULL)
 }
 \arguments{
-\item{date}{The target date as "YYYY-MM-DD" character string. Defaults to the current machine date.}
-
-\item{...}{Additional arguments. Currently not implemented.}
+\item{date}{(Character) The target date in "YYYY-MM-DD" format.
+Defaults to the current machine date.}
 }
 \value{
 Returns a message with the number of days left until Christmas.
 }
 \description{
-A simple function to tell you how many days are left until the next Christmas.
+A simple function to tell you how many days are left until
+  the next Christmas.
 }
 \details{
 The description says it all - plain and simple!
 }
 \examples{
-{
+library(whensxmas)
 whensxmas()
-}
 }
 \author{
 Raoul Wolf (\url{https://github.com/RaoulWolf/})

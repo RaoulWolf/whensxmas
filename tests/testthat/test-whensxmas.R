@@ -5,11 +5,19 @@ test_that("when's Christmas", {
     )
 
   expect_message(
-    whensxmas(date = "2021-01-01")
+    whensxmas("2021-01-01")
   )
 
   expect_message(
-    whensxmas(date = "2021-12-25")
+    whensxmas("2021-12-25")
+  )
+
+  expect_message(
+    whensxmas("2022-12-31")
+  )
+
+  expect_error(
+    whensxmas("Not a date.")
   )
 
 })
