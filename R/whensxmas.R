@@ -1,13 +1,14 @@
 #' @title Days Until Christmas
-#' @description A simple function to tell you how many days are left until
-#'   the next Christmas.
-#' @param date (Character) The target date in "YYYY-MM-DD" format.
-#'   Defaults to the current machine date.
+#' @description A simple function to tell you how many days are left until the
+#'   next Christmas.
+#' @param date (Character) The target date in "YYYY-MM-DD" format. Defaults to
+#'   the current machine date.
 #' @details The description says it all - plain and simple!
 #' @return Returns a message with the number of days left until Christmas.
 #' @author Raoul Wolf (\url{https://github.com/RaoulWolf/})
 #' @examples
 #' library(whensxmas)
+#' Sys.Date() # for reference
 #' whensxmas()
 #' @importFrom lubridate days today year ymd
 #' @export
