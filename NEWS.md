@@ -1,6 +1,7 @@
 # whensxmas 0.1.2 (2021-12-17)
 
 * Removed the dependency on lubridate. 
+* Switched from testthat to tinytest.
 
 # whensxmas 0.1.1 (2021-12-16)
 
