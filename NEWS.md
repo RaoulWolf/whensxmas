@@ -1,10 +1,10 @@
-# whensxmas 0.3.0 (2021-12-17)
+# whensxmas 0.1.2 (2021-12-17)
 
-* Removed the dependency on the {lubridate}. 
+* Removed the dependency on lubridate. 
 
-# whensxmas 0.2.0 (2021-12-16)
+# whensxmas 0.1.1 (2021-12-16)
 
-* Added a `NEWS.md` file to track changes to the package.
+* Added a NEWS.md file to track changes to the package.
 * Added `tryCatch()` method to deal with non-parsable dates.
 
 # whensxmas 0.1.0 (2021-12-15)
