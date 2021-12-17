@@ -10,39 +10,50 @@
 #' library(whensxmas)
 #' Sys.Date() # for reference
 #' whensxmas()
-#' @importFrom lubridate days today year ymd
 #' @export
 whensxmas <- function(date = NULL) {
 
   if (is.null(date)) {
-    date <- lubridate::today()
+    date <- Sys.Date()
   } else {
     date <- tryCatch(
-      lubridate::ymd(date),
-      warning = function(w) {
-        stop("Could not parse the provided date.
-             Is it in \"YYYY-MM-DD\" format?", call. = FALSE)
-      }
+      expr = { as.Date(date, format = "%Y-%m-%d") },
+      error = function(e) { NA }
     )
   }
 
-  current_year <- lubridate::year(date)
-  current_xmas <- lubridate::ymd(paste0(current_year, "-12-25"))
+  if (is.na(date)) {
+    stop(
+      paste("Could not parse the provided date.",
+            "Is it in \"YYYY-MM-DD\" format?"),
+      call. = FALSE
+    )
+  }
+
+  current_year <- as.numeric(substr(date, start = 1, stop = 4))
+  current_xmas <- as.Date(
+    paste0(current_year, "-12-25"),
+    format = "%Y-%m-%d"
+    )
 
   if (date < current_xmas) {
     next_xmas <- current_xmas
   } else if (date > current_xmas) {
-    next_xmas <- lubridate::ymd(paste0(current_year + 1, "-12-25"))
+    next_xmas <- as.Date(
+      paste0(current_year + 1, "-12-25"),
+      format = "%Y-%m-%d"
+      )
   } else {
     next_xmas <- current_xmas
   }
 
-  xmas_diff <- lubridate::days(next_xmas - date)
+  xmas_diff <- difftime(next_xmas, date, units = "days")[[1]]
+
 
   if (date == current_xmas) {
     xmas_text <- "Christmas is today!"
   } else {
-    xmas_text <- paste0("Only ", xmas_diff@day, " days until Christmas!")
+    xmas_text <- paste0("Only ", xmas_diff, " days until Christmas!")
   }
 
   message(xmas_text)

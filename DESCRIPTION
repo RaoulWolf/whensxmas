@@ -1,7 +1,7 @@
 Package: whensxmas
 Type: Package
 Title: Days Until Christmas
-Version: 0.2.0
+Version: 0.3.0
 Author: Raoul Wolf
 Maintainer: Raoul Wolf <raoul.wolf@ngi.no>
 Description: A simple function to tell you how many days are left until the 
@@ -11,8 +11,6 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/RaoulWolf/whensxmas
 BugReports: https://github.com/RaoulWolf/whensxmas/issues
-Imports:
-    lubridate
 Suggests: 
     covr,
     testthat (>= 3.0.0)

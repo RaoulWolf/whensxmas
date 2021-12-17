@@ -1,3 +1,7 @@
+# whensxmas 0.3.0 (2021-12-17)
+
+* Removed the dependency on the {lubridate}. 
+
 # whensxmas 0.2.0 (2021-12-16)
 
 * Added a `NEWS.md` file to track changes to the package.
