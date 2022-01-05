@@ -1,3 +1,7 @@
+# whenxmas 0.1.3 (2022-01-05)
+
+* Simplified handling of non-parsable dates.
+
 # whensxmas 0.1.2 (2021-12-17)
 
 * Removed the dependency on lubridate. 
